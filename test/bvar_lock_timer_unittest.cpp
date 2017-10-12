@@ -4,7 +4,7 @@
 // Date: 2015/03/06 18:34:03
 
 #include <iostream>
-#if __cplusplus >= 201103L
+#if __cplusplus >= 201103L && defined(BASE_CXX11_ENABLED)
 #include <condition_variable>
 #endif
 #include <gtest/gtest.h>
@@ -44,7 +44,7 @@ using bvar::utils::MutexWithLatencyRecorder;
 class LockTimerTest : public testing::Test {
 };
 
-#if __cplusplus >= 201103L
+#if __cplusplus >= 201103L && defined(BASE_CXX11_ENABLED)
 TEST_F(LockTimerTest, MutexWithRecorder) {
     IntRecorder recorder;
     MutexWithRecorder<std::mutex> mutex(recorder);

@@ -1,3 +1,15 @@
+# What for C++0x
+* Install depends gflags  leveldb  protobuf boost(version >1.56) 
+* Download my code, only change these files
+```
+   --- src/butil/build_config.h
+   --- src/butil/macros.h
+   --- src/butil/unique_ptr.h
+   --- src/bvar/utils/lock_timer.h
+   --- test/bvar_lock_timer_unittest.cpp
+```
+* my build steps and doc is: [HERE](http://note.youdao.com/share/?id=8e32d4475c0889b3a6770a15c6bad26e#/)
+
 # What is RPC?
 
 Most machines on internet communicate with each other via [TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite). However, TCP/IP only guarantees reliable data transmissions. We need to abstract more to build services:

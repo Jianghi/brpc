@@ -165,10 +165,9 @@
 #define BASE_STRING16_ITERATOR_IS_CHAR16_POINTER
 #endif
 
-#if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
-#define BASE_CXX11_ENABLED 1
-#endif
-
+//#if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
+//#define BASE_CXX11_ENABLED 1
+//#endif
 #if !defined(BASE_CXX11_ENABLED)
 #define nullptr NULL
 #endif

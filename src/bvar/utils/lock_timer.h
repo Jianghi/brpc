@@ -282,7 +282,7 @@ public:
     bool owns_lock() const { return _lock.owns_lock(); }
     operator bool() const { return static_cast<bool>(_lock); }
 
-#if __cplusplus >= 201103L
+#if __cplusplus >= 201103L && BASE_CXX11_ENABLED
     template <class Rep, class Period>
     bool try_lock_for(
             const std::chrono::duration<Rep, Period>& timeout_duration) {

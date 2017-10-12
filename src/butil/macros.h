@@ -330,12 +330,8 @@ enum LinkerInitialized { LINKER_INITIALIZED };
 # if defined(BASE_CXX11_ENABLED)
 #  define BAIDU_TYPEOF decltype
 # else
-#  ifdef _MSC_VER
-#   include <boost/typeof/typeof.hpp>
-#   define BAIDU_TYPEOF BOOST_TYPEOF
-#  else
-#   define BAIDU_TYPEOF typeof
-#  endif
+#  include <boost/typeof/typeof.hpp>
+#  define BAIDU_TYPEOF BOOST_TYPEOF
 # endif // BASE_CXX11_ENABLED
 #endif  // BAIDU_TYPEOF
 

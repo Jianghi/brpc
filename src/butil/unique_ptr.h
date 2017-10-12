@@ -3,12 +3,9 @@
 
 #include "butil/build_config.h"
 
-#if defined(BASE_CXX11_ENABLED)
-
+#if defined(BASE_CXX11_ENABLED) || __cplusplus >= 201103L
 #include <memory>                                        // std::unique_ptr
-
 #elif !defined(BAIDU_NO_EMULATED_UNIQUE_PTR)
-
 // Copyright 2009 Howard Hinnant, Ion Gazta&ntilde;aga.
 // Distributed under the Boost Software License, Version 1.0. (See
 // accompanying file LICENSE_1_0.txt or copy at
